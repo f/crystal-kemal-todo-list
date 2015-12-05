@@ -2,12 +2,81 @@
   <head>
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.6.2/jquery.mockjax.js"></script>
+    <style media="screen">
+      body {
+        font-family: "Helvetica Neue", sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        text-align: center;
+        font-size: 22px;
+        background-color: #85B2D2;
+        padding: 10px;
+        color: #444;
+        margin: 0;
+      }
+      #todos {
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #todos li {
+        padding: 10px;
+        background-color: #dedede;
+      }
+
+      #todos li:nth-child(2n+1) {
+        background-color: #ECECEC;
+      }
+
+      #todos li input[type=checkbox] {
+        margin-right: 20px;
+      }
+
+      #form {
+        width: 100%;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        background-color: #9CC1B0;
+        height: 40px;
+        border-top: 5px solid #8A8A8A;
+      }
+
+      #form input {
+        width: 80%;
+        border: 0;
+        font-size: 18px;
+        position: absolute;
+        line-height: 40px;
+        padding: 0 10px;
+        background-color: #dedede;
+        outline: none;
+      }
+
+      #form button {
+        width: 20%;
+        border: 0;
+        position: absolute;
+        right: 0;
+        font-size: 18px;
+        line-height: 40px;
+        background-color: #9CC1B0;
+
+      }
+    </style>
   </head>
   <body>
+    <header>
+      <h1>Todo List</h1>
+    </header>
     <ul id="todos"></ul>
-    <div class="">
-      <input type="text" id="new_todo" value="">
-      <button id="add_todo">Add Todo</button>
+    <div id="form">
+      <input type="text" placeholder="What will you do?" id="new_todo" value="">
+      <button id="add_todo">Add</button>
     </div>
     <script src="index.js"></script>
   </body>

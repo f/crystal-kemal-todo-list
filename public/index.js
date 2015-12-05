@@ -2,7 +2,6 @@
 var eventBus = $({});
 
 function request(method, url, params) {
-  console.log(arguments);
   return $.ajax({
     method: method,
     url: url,
